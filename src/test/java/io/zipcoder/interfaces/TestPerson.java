@@ -8,12 +8,14 @@ public class TestPerson {
     @Test
     public void testPersonConstructor() {
         //given
-        Long expectedId = Long.MAX_VALUE;
-        String expectedName = "PersonName";
-        Person person = new Person(expectedId, expectedName);
+        Person person = new Person(3, "Jim");
+
+        long actualId = 3;
+        String actualName = "Jim";
+
         //when
-        Long actualId = person.getId();
-        String actualName = person.getName();
+        long expectedId = person.getId();
+        String expectedName = person.getName();
         //then
         Assert.assertEquals(expectedId, actualId);
         Assert.assertEquals(expectedName, actualName);
@@ -22,7 +24,7 @@ public class TestPerson {
     @Test
     public void testSetName() {
         //given
-        Person person = new Person();
+        Person person = new Person(0, "Asia");
         String expected = "PersonName";
         //when
         person.setName(expected);

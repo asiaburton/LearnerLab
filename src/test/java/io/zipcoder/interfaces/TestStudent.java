@@ -8,7 +8,7 @@ public class TestStudent {
     @Test
     public void testImplementation() {
         //when
-        Student student = new Student();
+        Student student = new Student(0, null);
         //then
         Assert.assertTrue(student instanceof Learner);
     }
@@ -16,7 +16,7 @@ public class TestStudent {
     @Test
     public void TestInheritance() {
         //when
-        Student student = new Student();
+        Student student = new Student(0, null);
         //then
         Assert.assertTrue(student instanceof Person);
     }
@@ -24,14 +24,12 @@ public class TestStudent {
     @Test
     public void testLearn() {
         //given
-        Student student = new Student(1L, "Jesse");
+        Student student = new Student(0, null);
         //when
         student.learn(12.0);
         double expected = 12.0;
-
-
         //then
-        Assert.assertEquals(expected,12, 0.7);
+        Assert.assertEquals(expected,12, 00.1);
 
 
 

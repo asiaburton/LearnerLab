@@ -1,23 +1,17 @@
 package io.zipcoder.interfaces;
 
 public class Person {
-//instance variables
-    final Long id;
+    //instance variables
+    final long id;
     String name;
 
 
-
-    public Person(Long id, String name) {
+    public Person(long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Person() {
-        this.id = Long.MAX_VALUE;
-        this.name = "";
-    }
-
-    public Long getId() {
+    public long getId() {
         return this.id;
     }
 
@@ -30,4 +24,6 @@ public class Person {
     }
 
 
+    public void findById() {
+    }
 }

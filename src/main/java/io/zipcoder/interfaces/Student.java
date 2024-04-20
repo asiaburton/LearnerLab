@@ -4,18 +4,14 @@ public class Student extends Person implements Learner{
 
     double totalStudyTime;
 
-    public Student(Long id, String name) {
+    public Student(long id, String name) {
         super(id, name);
+        totalStudyTime = 0.0;
     }
-
-    public Student() {
-
-    }
-
 
     @Override
     public void learn(double numberOfHours) {
-
+        totalStudyTime += numberOfHours;
     }
 
     @Override
